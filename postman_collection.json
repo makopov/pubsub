@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "b856fdf5-26a5-4e53-ae82-9b31a99a3a22",
+		"name": "Pub Sub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upsert Topic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribe Topic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "topic",
+							"value": "rain",
+							"type": "text"
+						},
+						{
+							"key": "callback",
+							"value": "http://localhost:8001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/subscribe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
